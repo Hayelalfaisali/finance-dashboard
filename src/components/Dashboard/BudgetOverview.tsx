@@ -48,49 +48,28 @@ const BudgetItem = ({ category, spent, total, color }: BudgetItemProps) => {
 };
 
 const BudgetOverview = () => {
-  const headingColor = useColorModeValue('gray.900', 'white');
-  const textColor = useColorModeValue('gray.600', 'gray.300');
-  const boxBg = useColorModeValue('white', 'gray.700');
-  const boxShadow = useColorModeValue('sm', 'xl');
+  const bgColor = useColorModeValue('white', 'gray.800');
 
-  // Example data - replace with actual data from your state management
-  const budget = {
-    total: 5000,
-    spent: 3200,
-    remaining: 1800,
-  };
-
-  const spentPercentage = (budget.spent / budget.total) * 100;
+  const budgetItems = [
+    { category: 'Housing', spent: 1200, total: 1500, color: 'blue.400' },
+    { category: 'Food', spent: 400, total: 600, color: 'green.400' },
+    { category: 'Transportation', spent: 200, total: 300, color: 'purple.400' },
+    { category: 'Entertainment', spent: 150, total: 200, color: 'orange.400' },
+  ];
 
   return (
-    <Box p={5} borderRadius="lg" bg={boxBg} boxShadow={boxShadow}>
-      <VStack align="stretch" spacing={4}>
-        <Heading size="md" color={headingColor}>
-          Budget Overview
-        </Heading>
-        
-        <Box>
-          <HStack justify="space-between" mb={2}>
-            <Text color={textColor}>Monthly Budget</Text>
-            <Text fontWeight="bold">${budget.total.toLocaleString()}</Text>
-          </HStack>
-          
-          <Progress
-            value={spentPercentage}
-            colorScheme={spentPercentage > 80 ? "red" : "green"}
-            size="sm"
-            borderRadius="full"
+    <Box p={5} bg={bgColor} borderRadius="lg" boxShadow="sm">
+      <Heading size="md" mb={4}>Budget Overview</Heading>
+      <VStack spacing={4} align="stretch">
+        {budgetItems.map((item, index) => (
+          <BudgetItem
+            key={index}
+            category={item.category}
+            spent={item.spent}
+            total={item.total}
+            color={item.color}
           />
-          
-          <HStack justify="space-between" mt={2}>
-            <Text fontSize="sm" color={textColor}>
-              Spent: ${budget.spent.toLocaleString()}
-            </Text>
-            <Text fontSize="sm" color={textColor}>
-              Remaining: ${budget.remaining.toLocaleString()}
-            </Text>
-          </HStack>
-        </Box>
+        ))}
       </VStack>
     </Box>
   );

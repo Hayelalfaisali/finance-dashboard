@@ -23,7 +23,6 @@ import {
   FiHome,
   FiTrendingUp,
   FiDollarSign,
-  FiSettings,
 } from 'react-icons/fi';
 import ThemeToggle from '../../theme/ThemeToggle';
 
@@ -36,9 +35,10 @@ interface NavItemProps {
   icon: React.ElementType;
   children: string;
   to: string;
+  onClick?: () => void;
 }
 
-const NavItem = ({ icon, children, to }: NavItemProps) => {
+const NavItem = ({ icon, children, to, onClick }: NavItemProps) => {
   const location = useLocation();
   const isActive = location.pathname === to;
   const activeBg = useColorModeValue('blue.50', 'blue.900');
@@ -65,6 +65,9 @@ const NavItem = ({ icon, children, to }: NavItemProps) => {
             e.preventDefault();
             const link = e.currentTarget as HTMLElement;
             link.click();
+          }
+          if (onClick) {
+            onClick();
           }
         }}
       >

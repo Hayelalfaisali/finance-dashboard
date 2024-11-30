@@ -3,7 +3,6 @@ import {
   Grid,
   Heading,
   Select,
-  Text,
   Stat,
   StatLabel,
   StatNumber,

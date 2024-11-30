@@ -14,7 +14,6 @@ import {
   Select,
   useColorModeValue,
   IconButton,
-  Spacer,
 } from '@chakra-ui/react';
 import { FiDollarSign, FiTrendingUp, FiTrendingDown, FiMenu } from 'react-icons/fi';
 import ExpenseChart from './ExpenseChart';

@@ -1,10 +1,8 @@
 import {
   Box,
   Text,
-  Progress,
   VStack,
   HStack,
-  Spacer,
   useColorModeValue,
   CircularProgress,
   CircularProgressLabel,
