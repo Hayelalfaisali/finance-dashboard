@@ -51,10 +51,10 @@ const BudgetOverview = () => {
   const bgColor = useColorModeValue('white', 'gray.800');
 
   const budgetItems = [
-    { category: 'Housing', spent: 1200, total: 1500, color: 'blue.400' },
-    { category: 'Food', spent: 400, total: 600, color: 'green.400' },
-    { category: 'Transportation', spent: 200, total: 300, color: 'purple.400' },
-    { category: 'Entertainment', spent: 150, total: 200, color: 'orange.400' },
+    { category: 'Housing', spent: 1200, total: 1500, color: 'blue' },
+    { category: 'Food', spent: 400, total: 600, color: 'green' },
+    { category: 'Transportation', spent: 200, total: 300, color: 'purple' },
+    { category: 'Entertainment', spent: 150, total: 200, color: 'orange' },
   ];
 
   return (

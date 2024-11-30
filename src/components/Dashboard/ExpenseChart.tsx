@@ -1,4 +1,4 @@
-import { Box, Heading, Select, HStack, Badge } from '@chakra-ui/react';
+import { Box, Heading, Select, HStack, Badge, useColorModeValue } from '@chakra-ui/react';
 import {
   AreaChart,
   Area,
