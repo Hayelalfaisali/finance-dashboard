@@ -2,6 +2,12 @@
 
 A modern, responsive financial management dashboard built with React, TypeScript, and Chakra UI. This application provides a comprehensive interface for tracking finances, expenses, and savings goals with a beautiful, adaptive design that works seamlessly across all devices.
 
+# Finance Dashboard
+![DevFinder Screenshot](/public/image.png)
+
+![DevFinder Screenshot](/public/image1.png)
+
+
 ## 🌟 Features
 
 - **Responsive Design**
